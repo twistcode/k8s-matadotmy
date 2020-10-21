@@ -6,5 +6,9 @@ Basic deployment of mata.my using k8s
 ## Get Started
 
 ## Things to do
-- [ ] Simple hello world API and mongodb with k8s
-- [ ] Simple image classification API and mongodb with k8s
+- [ ] Hello world API using k8s
+- [ ] Image classification API using k8s
+- [ ] Image classification API and MongoDB using k8s
+- [ ] Object detection API and MongoDB using k8s
+- [ ] Integrate image classification and object detection services into a k8s cluster
+- [ ] Stress test and autoscaler API from k8s
