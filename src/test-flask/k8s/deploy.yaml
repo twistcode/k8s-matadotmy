@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: flask-tutorial
+  name: flask-tutorial
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: flask-tutorial
+  template:
+    metadata:
+      labels:
+        app: flask-tutorial
+    spec:
+      containers:
+      - name: flask-tutorial
+        image: hasifzulkifli95/flask-tutorial:latest
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 5000
