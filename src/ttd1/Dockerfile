@@ -1,9 +1,20 @@
-FROM python:3.8
+FROM python:3.8.1-slim
 
-COPY . .
+# install netcat
+RUN apt-get update && \
+    apt-get -y install netcat && \
+    apt-get clean
 
+# set working directory
+WORKDIR /usr/src/app
+
+# add and install requirements
+COPY ./requirements.txt /usr/src/app/requirements.txt
 RUN pip install -r requirements.txt
 
-EXPOSE 5000
+# add app
+COPY . /usr/src/app
 
-CMD ["uvicorn", "app:app", "--host", "0.0.0.0", "--port", "80", "--reload"]
+EXPOSE 80
+
+CMD ["uvicorn", "app:app", "--host", "0.0.0.0", "--port", "80"]
