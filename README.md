@@ -12,3 +12,10 @@ Basic deployment of mata.my using k8s
 - [ ] ttd4 - Object detection API and MongoDB using k8s
 - [ ] ttd5 - Integrate image classification and object detection services into a k8s cluster
 - [ ] ttd6 - Stress test and autoscaler API from k8s
+
+### flask-tutorial
+```
+docker build -t hasifzulkifli95/flask-tutorial:latest .
+docker push hasifzulkifli95/flask-tutorial:latest
+docker run hasifzulkifli95/flask-tutorial:latest
+```
