@@ -8,4 +8,5 @@ Hello world fastapi in docker
 sudo su
 minikube start --driver=none
 kubectl apply -f kubernetes.yaml
+kubectl apply -f k2.yaml
 ```
