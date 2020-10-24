@@ -15,6 +15,6 @@ RUN pip install -r requirements.txt
 # add app
 COPY . /usr/src/app
 
-EXPOSE 80
+EXPOSE 5000
 
-CMD ["uvicorn", "app:app", "--host", "0.0.0.0", "--port", "80"]
+CMD ["uvicorn", "app:app", "--host", "0.0.0.0", "--port", "5000"]
