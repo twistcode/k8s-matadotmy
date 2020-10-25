@@ -15,6 +15,10 @@ RUN pip install -r requirements.txt
 # add app
 COPY . /usr/src/app
 
+# ttd1
+#EXPOSE 80
+
+# ttd2
 EXPOSE 5000
 
 CMD ["uvicorn", "app:app", "--host", "0.0.0.0", "--port", "5000"]
