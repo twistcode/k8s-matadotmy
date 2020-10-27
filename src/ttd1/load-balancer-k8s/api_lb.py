@@ -29,8 +29,8 @@ async def inference(inference: Inference):
     if service == "image-classification":
         x = rq.post("http://10.102.169.184:5001/inference", json=post_image)
 
-#    if service == "object-detection":
-#        x = rq.post("http://10.102.169.184:5001/inference", json=example_data)
+    if service == "object-detection":
+        x = rq.post("http://10.110.141.249:5002/inference", json=post_image)
 
     return x.json()
 
